@@ -1,15 +1,15 @@
 import * as React from 'react'
-import {
+
+export const Counter = ({
+  countValue,
   onIncrement,
   onDecrement,
   onReset,
-} from '../../modules/counter'
-
-export const Counter = ({ counter, dispatch }) => (
-  <div>
-    <p>count: {counter.count}</p>
-    <button onClick={() => dispatch(onIncrement())}>Increment</button>
-    <button onClick={() => dispatch(onDecrement())}>Decrement</button>
-    <button onClick={() => dispatch(onReset())}>Reset</button>
-  </div>
-)
+}) => (
+    <div>
+      <p>count: {countValue}</p>
+      <button onClick={onIncrement}>Increment</button>
+      <button onClick={onDecrement}>Decrement</button>
+      <button onClick={onReset}>Reset</button>
+    </div>
+  )
